@@ -50,7 +50,7 @@
     </ol>
     </li>
 </ul>
-<div><img src="./system_design.png"></div>
+<div><img src="./system_design.jpg"></div>
 
 <h2>Project Report:</h2>
 <ul>
