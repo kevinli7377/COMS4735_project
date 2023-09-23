@@ -57,8 +57,8 @@
     </li>
 </ul>
 
-<p align="center"><img src="Input.jpeg" height="500"></p>
-<p><img src="Results.jpeg" height="500"></p>
+<p align="center"><img src="./Input.jpg" height="500"></p>
+<p align="center"><img src="./Results.jpeg" height="500"></p>
 
 <h2>Project Report:</h2>
 <ul>
