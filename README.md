@@ -12,22 +12,22 @@
 
 <h2>System specification and design:</h2>
 <ul>
-    <li>Languages: Python 3.9, HTML, CSS, Javascript</li>
-    <li>Libraries: Flask, OpenCV</li>
-    <li>System input: 
+    <li><b>Languages:</b> Python 3.9, HTML, CSS, Javascript</li>
+    <li><b>Libraries:</b> Flask, OpenCV</li>
+    <li><b>System input: </b>
         <ol>
             <li>Reference images with known liquid volumes (ml)</li>
             <li>Query image</li>
             <li>Query ground truth volume (ml) - used only for error computation and not decision-making</li>
         </ol>
     </li>
-    <li>Outpus:
+    <li><b>Outpus:</b>
         <ul>
             <li>Estimation of liquid volume (ml) in the query (and error calculations)</li>
         </ul>
     </li>
     <li>
-        High-level breakdown of the algorithm:
+        <b>High-level breakdown of the algorithm:</b>
         <ol>
         <li>Reference processing:
             <ol>
@@ -37,7 +37,7 @@
                 <li>Computation of cubic-pixel-to-ml conversion factors</li>
             </ol>
         </li>
-        <li>Query processing:
+        <li><b>Query processing:</b>
             <ol>
                 <li>Identification of colors in images using k-means clustering in every reference’s down-sampled image</li>
                 <li>Segmentation of liquid from container and background in every original reference image using identified liquid color</li>
@@ -46,7 +46,7 @@
                 <li>Mapping of cubic pixel volume to ml volume using determined conversion factors</li>
             </ol>
         </li>
-        <li>Output result: system estimation liquid volume and errors</li>
+        <li><b>Output result:</b> system estimation liquid volume and errors</li>
     </ol>
     </li>
 </ul>
