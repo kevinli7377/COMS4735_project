@@ -1,0 +1,150 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liquid Volume Estimation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #333;
+        }
+        h1, h2, p {
+            margin-top: 0;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #0072c6;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        input[type="file"] {
+            margin-bottom: 10px;
+        }
+        input[type="text"] {
+            margin-bottom: 20px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #0072c6;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005a9e;
+        }
+        input[type="submit"] {
+            background-color: #0072c6;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #005a9e;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .input-container {
+            width: 45%;
+            margin-bottom: 20px;
+        }
+    </style>
+    <script>
+        function addReferenceInput() {
+            const refContainer = document.getElementById('ref_container');
+            const newRefInput = document.createElement('div');
+            newRefInput.classList.add('input-container');
+            newRefInput.innerHTML = `
+                <label for="ref_image">Reference Image:</label>
+                <input type="file" name="ref_image[]" required><br>
+                <label for="ref_volume">Reference Volume:</label>
+                <input type="text" name="ref_volume[]" required><br>
+            `;
+            refContainer.appendChild(newRefInput);
+        }
+    </script>
+</head>
+<body>
+    <h1>Liquid Volume Estimation</h1>
+    <p>
+        Estimation of volumes of colored liquids in rotationally symmetric 
+        transparent colorless containers.
+        <br><br>
+        Upload at least 1 reference image with its known volume.
+        <br>
+        Upload the query image with its known volume. <br><br>
+        <i>NOTE: The query volume is not used in decision-making. It is only used
+        for error computation.</i>
+        <br><br>
+        Supported file types: .jpg,.jpeg,.png
+        <br><br>
+    </p>
+    <form action="{{ url_for('submit') }}" method="POST" enctype="multipart/form-data">
+    <table>
+        <tr>
+            <div id="ref_container">
+                <td>
+                    <label for="ref_image">Reference Image:</label>
+                    <input type="file" name="ref_image[]" required><br>
+                    <label for="ref_volume">Reference Volume (ml):</label>
+                    <input type="text" name="ref_volume[]" required><br>
+                <div>
+                    <button type="button" onclick="addReferenceInput()">Add another reference</button><br>
+                    <p></p>
+                </div>
+                </td>
+            </div>  
+
+
+            </div>
+
+
+            <td>
+                <label for="query_image">
+                    <label for="query_image">Query Image:</label>
+                    <input type="file" name="query_image" required><br>
+                    <label for="query_volume">Query Volume (ml):</label>
+                    <input type="text" name="query_volume" required><br>
+                    <input type="submit" value="Submit">
+                </label>
+
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
+
+
+
+<!-- There appears to be a disjunct between teh received image inputs and the volumes - need to sort internall to prevent errors -->
+<!-- Likely due to the use of inserting new references that mess up the linking -->
+
+<!-- Consider downsampling the image to increase efficienty - currently runs too slowly-->

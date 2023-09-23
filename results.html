@@ -1,0 +1,120 @@
+<!--results.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+    <style> 
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #767676;
+        }
+        h1, h2, p {
+            margin-top: 0;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #005a9e;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #005a9e;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .results {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .result {
+            width: 30%;
+            margin-bottom: 30px;
+        }
+        .result img {
+            max-width: 100%;
+            height: auto;
+        }
+        .back-link {
+            display: block;
+            margin-top: 30px;
+            font-weight: bold;
+            color: #0072c6;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 30px;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Results:</h1>
+
+    <div class="results">
+
+        <div class="result">
+            <h2>Estimation (ml)</h2>
+            <p>{{ estimation }}</p>
+        </div>
+        <div class="result">
+            <h2>Relative Difference (%)</h2>
+            <p>{{ relative_diff }}</p>
+        </div>
+
+        <div class="result">
+            <h2>Absolute Difference (ml)</h2>
+            <p>{{ abs_diff }}</p>
+        </div>
+
+        <div class="result">
+            <h2>Query Image (Binary Intermediate)</h2>
+            <table>
+                <tr>
+                    <th>Image</th>
+                    <th>Volume (ml)</th>
+                </tr>
+                <tr>
+                    <td><img src="{{ q_liquid_image }}" alt="Query Liquid Image"></td>
+                    <td>{{query_volume}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="result">
+            <h2>Reference Images (Binary Intermediates)</h2>
+            <table>
+                <tr>
+                    <th>Image</th>
+                    <th>Volume (ml)</th>
+                </tr>
+                {% for i in range(ref_liquid_images|length) %}
+                    <tr>
+                        <td><img src="{{ ref_liquid_images[i] }}" alt="Reference Liquid Image"></td>
+                        <td>{{ref_volumes[i]}}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+    </div>
+    <a href="{{ url_for('index') }}" class="back-link">Back to Home</a>
+</body>
+</html>
