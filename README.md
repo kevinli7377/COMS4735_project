@@ -60,11 +60,15 @@
 <h3>Front-end application interface:</h3>
 
 <br>
-<p align="center"><figure><img src="./Input.jpg" height="500"><figcaption>Front-end application to upload references, query, and their respective volumes.</figure></p>
+<p align="center"><img src="./Input.jpg" height="500"></p>
+
+<p align="center">Front-end application to upload references, query, and their respective volumes.</p>
 
 <br>
 
-<p align="center"><figure><img src="./Results.jpeg" height="500"></figure></p>
+<p align="center"><img src="./Results.jpeg" height="500"></p>
+
+<p align="center">Result after submitting query.</p>
 
 <h2>Project Report:</h2>
 <ul>
