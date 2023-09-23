@@ -65,6 +65,6 @@
 <h2>Project Code:</h2>
 <ul>
     <li><a href="system.py">Link to system code.</a></li>
-    <li><a href="app.py">Link to interface back-end processing.</a></li>
+    <li><a href="app.py">Link to back-end server.</a></li>
     <li><a href="index.html">Link to front-end interface.</a></li>
 </ul>
