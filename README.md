@@ -50,11 +50,11 @@
     </ol>
     </li>
 </ul>
-<div><img src="COMS4735_project/system_design.png"></div>
+<div><img src="./system_design.png"></div>
 
 <h2>Project Report:</h2>
 <ul>
-    <li><a href="COMS4735_project/kl3285_project_report.pdf">Link to project report</a></li>
+    <li><a href="./kl3285_project_report.pdf">Link to project report</a></li>
 </ul>
 
 <h2>Project Code:</h2>
