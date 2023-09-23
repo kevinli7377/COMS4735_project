@@ -6,9 +6,9 @@
 
 <h2>Project Introduction:</h2>
 <span>The objective of this project is to develop a visual interface for estimating volumes of colored liquids in transparent, colorless, rotationally symmetrical vessels placed on horizontally flat surfaces. For instance, a user may want to determine the volume of Coca-Cola or orange juice in a symmetrical water glass. By supplying the system with a query and a set of reference images of a common vessel containing known liquid volumes, an estimate of the query’s liquid volume (ml) can be generated. The system estimates the query volume by mapping a 2-dimensional image to a 3-dimensional metric without the need for depth information. During this project, existing research and projects were sampled. </span>
-<br></br>
+<br><br>
 
-<span>Extensive domain engineering and testing was required to ensure a final system success rate of >88.8% in estimating volumes within a margin of +/- 15ml.</span>
+<span>Extensive domain engineering and testing were required to ensure a final system success rate of >88.8% in estimating volumes within a margin of +/- 15ml.</span>
 
 <h2>System specification and design:</h2>
 <ul>
@@ -18,7 +18,7 @@
         <ol>
             <li>Reference images with known liquid volumes (ml)</li>
             <li>Query image</li>
-            <li>Query ground truth volume (ml) - used only for error computation and not decision making</li>
+            <li>Query ground truth volume (ml) - used only for error computation and not decision-making</li>
         </ol>
     </li>
     <li>Outpus:
@@ -27,7 +27,7 @@
         </ul>
     </li>
     <li>
-        High-level breakdown of algorithm:
+        High-level breakdown of the algorithm:
         <ol>
         <li>Reference processing:
             <ol>
@@ -50,7 +50,12 @@
     </ol>
     </li>
 </ul>
-<div><img src="./system_design.jpg"></div>
+
+<br><br>
+<p align="center">
+  <img src="./system_design.jpg" height="500">
+</p>
+<br>
 
 <h2>Project Report:</h2>
 <ul>
