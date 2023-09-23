@@ -10,6 +10,12 @@
 
 <span>Extensive domain engineering and testing were required to ensure a final system success rate of >88.8% in estimating volumes within a margin of +/- 15ml.</span>
 
+<br><br>
+<p align="center">
+  <img src="./system_design.jpg" height="500">
+</p>
+<br>
+
 <h2>System specification and design:</h2>
 <ul>
     <li><b>Languages:</b> Python 3.9, HTML, CSS, Javascript</li>
@@ -51,11 +57,8 @@
     </li>
 </ul>
 
-<br><br>
-<p align="center">
-  <img src="./system_design.jpg" height="500">
-</p>
-<br>
+<div><img src="Input.jpeg" height="500"></div>
+<div><img src="Results.jpeg" height="500"></div>
 
 <h2>Project Report:</h2>
 <ul>
